@@ -13,13 +13,16 @@ body {
 }
 
 .container {
-  padding: 1rem 3rem;
+  padding: 1rem 12rem;
+}
+
+@media only screen and (max-width: 1000px) {
+  .container {
+    padding: 1rem;
+  }
 }
 
 @media only screen and (max-width: 600px) {
-  body {
-    overflow-x: hidden;
-  }
   .container {
     padding: 1rem 0.8rem;
   }
@@ -215,13 +218,13 @@ header {
 
 .skills {
   min-height: 100vh;
-  margin-top: 5rem;
   margin-bottom: 5rem;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0.8))), url("../images/snow3.jpg");
   background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("../images/snow3.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  padding: 1rem 15rem;
 }
 
 .skills-title {
@@ -233,8 +236,8 @@ header {
 .skills-grid {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(250px, 1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  -ms-grid-columns: (minmax(200px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   -ms-grid-rows: auto;
       grid-template-rows: auto;
   gap: 1rem;
@@ -282,6 +285,12 @@ header {
   color: #fff;
 }
 
+@media only screen and (max-width: 1000px) {
+  .skills {
+    padding: 1rem;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .skills-title {
     font-size: 2rem;
@@ -298,13 +307,12 @@ header {
 .portfolio__projects {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(300px, 1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  -ms-grid-columns: (minmax(200px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 2rem;
 }
 
 .portfolio__project {
-  min-height: 60vh;
   border-radius: 10px;
   box-shadow: 6px 6px 10px 1px rgba(0, 0, 0, 0.21);
   -webkit-box-shadow: 6px 6px 10px 1px rgba(0, 0, 0, 0.21);

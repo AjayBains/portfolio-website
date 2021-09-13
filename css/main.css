@@ -1,0 +1,402 @@
+@import url("https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #fff;
+  font-family: "Hind", sans-serif;
+}
+
+.container {
+  padding: 1rem 3rem;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    overflow-x: hidden;
+  }
+  .container {
+    padding: 1rem 0.8rem;
+  }
+}
+
+header {
+  height: 100vh;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.8))), url("../images/snow1.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../images/snow1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 1rem 3rem;
+  background-attachment: fixed;
+}
+
+.navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2rem;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 2rem;
+}
+
+.navigation .nav-link:link,
+.navigation .nav-link:visited {
+  color: gray;
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+.navigation .nav-link:hover,
+.navigation .nav-link:active {
+  font-size: 1.05rem;
+  color: burlywood;
+}
+
+.hero .name {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.hero .name .title {
+  font-size: 6rem;
+  word-spacing: -0.5rem;
+  letter-spacing: 1rem;
+  font-weight: 600;
+  -webkit-animation: dropdown 2s;
+          animation: dropdown 2s;
+  color: #fff;
+}
+
+.hero .name .job-title {
+  font-size: 2.5rem;
+  font-weight: 500;
+  letter-spacing: 0.5rem;
+  color: gray;
+  -webkit-animation: moveUp 2s;
+          animation: moveUp 2s;
+}
+
+@-webkit-keyframes dropdown {
+  0% {
+    opacity: 0;
+    position: relative;
+    top: -8rem;
+  }
+  95% {
+    opacity: 0.8;
+    top: 1rem;
+  }
+  100% {
+    opacity: 1;
+    position: relative;
+    top: 0;
+  }
+}
+
+@keyframes dropdown {
+  0% {
+    opacity: 0;
+    position: relative;
+    top: -8rem;
+  }
+  95% {
+    opacity: 0.8;
+    top: 1rem;
+  }
+  100% {
+    opacity: 1;
+    position: relative;
+    top: 0;
+  }
+}
+
+@-webkit-keyframes moveUp {
+  0% {
+    opacity: 0;
+    position: relative;
+    top: 8rem;
+  }
+  95% {
+    opacity: 0.8;
+    top: -1rem;
+  }
+  100% {
+    opacity: 1;
+    position: relative;
+    top: 0;
+  }
+}
+
+@keyframes moveUp {
+  0% {
+    opacity: 0;
+    position: relative;
+    top: 8rem;
+  }
+  95% {
+    opacity: 0.8;
+    top: -1rem;
+  }
+  100% {
+    opacity: 1;
+    position: relative;
+    top: 0;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .hero .name .title {
+    font-size: 3.5rem;
+    letter-spacing: 0.8rem;
+    word-spacing: 0;
+  }
+  .hero .name .job-title {
+    font-size: 1.5rem;
+    letter-spacing: 0.3rem;
+    color: gray;
+  }
+}
+
+.about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+}
+
+.about-img {
+  text-align: center;
+}
+
+.about-img img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.about-text {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-size: 1.25rem;
+  font-weight: 500;
+  word-spacing: 0.6rem;
+  line-height: 150%;
+  color: gray;
+  text-align: justify;
+}
+
+@media only screen and (max-width: 600px) {
+  .about-img {
+    display: none;
+  }
+  .about-text {
+    font-size: 1.1rem;
+    word-spacing: 0.1rem;
+  }
+}
+
+.skills {
+  min-height: 100vh;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0.8))), url("../images/snow3.jpg");
+  background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("../images/snow3.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.skills-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 3rem;
+}
+
+.skills-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(250px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  gap: 1rem;
+  grid-row-gap: 2rem;
+  min-height: 80vh;
+}
+
+.skill {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.skill p {
+  display: none;
+}
+
+.skill:hover {
+  background-color: gray;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.51rem;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  border-radius: 15px;
+}
+
+.skill:hover p {
+  display: block;
+  font-size: 1.2rem;
+  z-index: 4;
+}
+
+.skill-name {
+  color: #fff;
+}
+
+@media only screen and (max-width: 600px) {
+  .skills-title {
+    font-size: 2rem;
+  }
+}
+
+.portfolio-title {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+.portfolio__projects {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.portfolio__project {
+  min-height: 60vh;
+  border-radius: 10px;
+  box-shadow: 6px 6px 10px 1px rgba(0, 0, 0, 0.21);
+  -webkit-box-shadow: 6px 6px 10px 1px rgba(0, 0, 0, 0.21);
+  -moz-box-shadow: 6px 6px 10px 1px rgba(0, 0, 0, 0.21);
+  padding: 2rem;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.portfolio__project:hover {
+  -webkit-transform: scale(0.97);
+          transform: scale(0.97);
+}
+
+.portfolio__img {
+  height: 80%;
+  border-radius: 10px;
+}
+
+.project-img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.project__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.6rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+.bi {
+  font-size: 1.5rem;
+  color: cornflowerblue;
+  cursor: pointer;
+  -webkit-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
+}
+
+.bi:hover {
+  color: burlywood;
+}
+
+.description__text {
+  font-weight: bold;
+}
+
+.footer {
+  background-color: gray;
+  margin-top: 2rem;
+  padding: 1rem 3rem;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.8))), url("../images/snow1.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../images/snow1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 1.3rem;
+  height: 30vh;
+}
+
+.contact p a {
+  color: #fff;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+    gap: 2rem;
+  }
+}
+/*# sourceMappingURL=main.css.map */

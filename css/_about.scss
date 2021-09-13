@@ -1,0 +1,34 @@
+.about {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  min-height: 100vh;
+}
+.about-img {
+  text-align: center;
+  // flex: 1;
+}
+.about-img img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.about-text {
+  flex: 1;
+  font-size: 1.25rem;
+  font-weight: 500;
+  word-spacing: 0.6rem;
+  line-height: 150%;
+  color: $color-major;
+  text-align: justify;
+}
+@media only screen and (max-width: 600px) {
+  .about-img {
+    display: none;
+  }
+  .about-text {
+    font-size: 1.1rem;
+    word-spacing: 0.1rem;
+  }
+}

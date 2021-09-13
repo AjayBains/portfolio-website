@@ -1,0 +1,66 @@
+.skills {
+  min-height: 100vh;
+
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0.8)
+    ),
+    url("../images/snow3.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.skills-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 3rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-rows: auto;
+  gap: 1rem;
+  grid-row-gap: 2rem;
+  min-height: 80vh;
+}
+
+.skill {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease-in-out;
+  & p {
+    display: none;
+  }
+  &:hover {
+    background-color: $color-major;
+    flex-direction: column;
+    gap: 0.51rem;
+    transform: scale(0.9);
+    border-radius: 15px;
+
+    & p {
+      display: block;
+      font-size: 1.2rem;
+      z-index: 4;
+    }
+  }
+}
+.skill-name {
+  color: $color-light;
+}
+
+// .skill-icon {
+//   width: 10%;
+//   font-size: 1rem;
+//   font-weight: 300;
+// }
+
+@media only screen and (max-width: 600px) {
+  .skills-title {
+    font-size: 2rem;
+  }
+}

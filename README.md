@@ -1,6 +1,6 @@
 # Portfolio-Website
 ## TechStack and tools
-- **HTML,CSS,SCSSS**
+- **HTML,CSS,SCSS**
 - **VSCODE**
 
 ## Website Link
